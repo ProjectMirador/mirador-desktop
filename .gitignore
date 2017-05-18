@@ -1,0 +1,7 @@
+mirador
+app/assets/mirador
+app/node_modules
+build
+.DS_Store
+tmp
+npm-debug.log

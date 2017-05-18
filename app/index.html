@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" type="text/css" href="./assets/mirador/css/mirador-combined.min.css">
+
+  <!-- HACK: Makes jQuery work with Electron -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <script type="text/javascript" src="./assets/mirador/mirador.min.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+
+  <!-- Ends Electron HACK -->
+  <script>if (window.module) module = window.module;</script>
+</head>
+<body tabindex="-1" style="background: url('assets/mirador-logo.png') no-repeat fixed center grey;">
+</body>
+</html>

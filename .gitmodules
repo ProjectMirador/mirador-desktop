@@ -1,0 +1,4 @@
+[submodule "mirador"]
+	path = mirador
+	url = https://github.com/ProjectMirador/mirador
+	branch = detail_images_and_image_choice
