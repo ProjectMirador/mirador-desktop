@@ -1,0 +1,42 @@
+{
+  "name": "mirador-desktop",
+  "version": "2.4.0",
+  "productName": "Mirador Desktop",
+  "description": "Multi-window image viewer, a tool to support researcher goals",
+  "main": "./main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProjectMirador/mirador-desktop"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "asar": "^0.13.0",
+    "electron-packager": "^8.7.0",
+    "electron-rebuild": "^1.5.11",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "scripts": {
+    "app": "./node_modules/.bin/electron .",
+    "lint": "./node_modules/.bin/eslint app/",
+    "mirador:build": "rm -rf assets/mirador && cd ../mirador && git pull && npm install && ./node_modules/.bin/grunt build && cp -r build/mirador ../app/assets/mirador; cd -",
+    "build": "npm run lint && npm run mirador:build && ./node_modules/.bin/electron-rebuild",
+    "package": "npm run package:mac && npm run package:win && npm run package:linux",
+    "package:mac": "./node_modules/.bin/electron-packager . \"Mirador Desktop\" --platform=darwin,mas  --arch=all --prune=true --out=../build --overwrite --asar=true --ignore=assets/icons --icon=assets/icons/mirador-logo_512.icns",
+    "package:win": "./node_modules/.bin/electron-packager . \"Mirador Desktop\" --platform=win32 --arch=all --prune=true --out=../build --overwrite --asar=true --version-string.CompanyName=\"Project Mirador\" --version-string.FileDescription=\"Mirador Desktop\" --version-string.ProductName=\"Mirador Desktop\" --ignore=assets/icons --icon=assets/icons/mirador-logo_512.ico",
+    "package:linux": "./node_modules/.bin/electron-packager . \"Mirador Desktop\" --platform=linux --arch=all --prune=true --out=../build --overwrite --asar=true --ignore=assets/icons --icon=assets/icons/mirador-logo_512.png",
+    "dist": "npm run build && npm run package"
+  },
+  "dependencies": {
+    "circular-json": "^0.3.1",
+    "electron": "^1.6.8",
+    "handlebars": "^4.0.8",
+    "image-size": "^0.5.1",
+    "jquery": "^3.1.1",
+    "mime-types": "^2.1.15",
+    "url-join": "^2.0.1",
+    "uuid": "^3.0.1"
+  },
+  "engine": "node < 7.0.0"
+}
