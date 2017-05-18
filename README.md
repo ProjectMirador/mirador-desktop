@@ -5,7 +5,7 @@ A desktop wrapper for Mirador and its environment, allowing the use of local ima
 
 ## Development
 
-First git into the `app` folder and run `npm instal`. Then several commands will be available:
+First get into the `app` folder and run `npm install`. Then several commands will be available:
 
 - `npm run app`, executes the app in local development mode
 - `npm run lint`, runs the linter with the airbnb style guide
@@ -19,4 +19,4 @@ First git into the `app` folder and run `npm instal`. Then several commands will
 
 ## Distribution
 
-Apps are not signed yet, therefore you might need to enable execution from unsafe sources.
+Apps are not signed yet, therefore you might need to enable execution from unsafe sources to run it.
