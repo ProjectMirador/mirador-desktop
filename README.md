@@ -3,11 +3,14 @@ A desktop wrapper for Mirador and its environment, allowing the use of local ima
 
 ![Mirador Desktop Demo](mirador-desktop-demo.gif)
 
+## Download
+Some binaries are available to [download](https://stanford.box.com/v/mirador-desktop).
+
 ## Development
 
 First get into the `app` folder and run `npm install`. Then several commands will be available:
 
-- `npm run app`, executes the app in local development mode
+- `npm run app`, executes the app in local development mode. It needs first `npm run build`.
 - `npm run lint`, runs the linter with the airbnb style guide
 - `npm run build`, builds Mirador from the git submodule added to the repo (unfortunately, `npm install mirador` doesn't work as expected), and add the mirador build to the app assets
 - `npm run mirador:build`, builds mirador only
