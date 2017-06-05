@@ -1,7 +1,7 @@
 # Mirador Desktop
 A desktop wrapper for Mirador and its environment, allowing the use of local images, and import/export of workspaces.
 
-![Mirador Desktop Demo](mirador-desktop-demo.gif)
+![Mirador Desktop Demo](demo.gif)
 
 ## Download
 Some binaries are available to [download](https://stanford.box.com/v/mirador-desktop).
