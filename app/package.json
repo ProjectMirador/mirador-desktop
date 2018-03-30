@@ -20,7 +20,7 @@
   "scripts": {
     "app": "./node_modules/.bin/electron .",
     "lint": "./node_modules/.bin/eslint app/",
-    "mirador:build": "rm -rf assets/mirador && cd ../mirador && git pull && npm install && ./node_modules/.bin/grunt build && cp -r build/mirador ../app/assets/mirador; cd -",
+    "mirador:build": "rm -rf assets/mirador && cd ../mirador && npm install && ./node_modules/.bin/grunt build && cp -r build/mirador ../app/assets/mirador; cd -",
     "build": "npm run lint && npm run mirador:build && ./node_modules/.bin/electron-rebuild",
     "package": "npm run package:mac && npm run package:win && npm run package:linux",
     "package:mac": "./node_modules/.bin/electron-packager . \"Mirador Desktop\" --platform=darwin,mas  --arch=all --prune=true --out=../build --overwrite --asar=true --ignore=assets/icons --icon=assets/icons/mirador-logo_512.icns",
